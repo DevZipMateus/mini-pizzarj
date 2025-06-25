@@ -1,17 +1,13 @@
-
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ArrowRight, Star } from 'lucide-react';
-
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (sectionRef.current) {
       sectionRef.current.classList.add('animate-fade-in');
     }
   }, []);
-
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById('sobre');
     if (aboutSection) {
@@ -20,13 +16,10 @@ const HeroSection = () => {
       });
     }
   };
-
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5521997075667?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20das%20mini%20pizzas.', '_blank');
   };
-
-  return (
-    <section id="inicio" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-20">
+  return <section id="inicio" ref={sectionRef} className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Background with pizza pattern */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat pizza-gradient opacity-90"></div>
@@ -34,9 +27,9 @@ const HeroSection = () => {
         {/* Pizza dots pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="w-full h-full" style={{
-            backgroundImage: 'radial-gradient(circle, white 2px, transparent 2px)',
-            backgroundSize: '50px 50px'
-          }}></div>
+          backgroundImage: 'radial-gradient(circle, white 2px, transparent 2px)',
+          backgroundSize: '50px 50px'
+        }}></div>
         </div>
       </div>
 
@@ -64,21 +57,14 @@ const HeroSection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 animate-slide-up [animation-delay:900ms] mb-8">
-                <Button 
-                  size="lg" 
-                  onClick={handleWhatsAppClick}
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground cta-button group"
-                >
+                <Button size="lg" onClick={handleWhatsAppClick} className="bg-accent hover:bg-accent/90 text-accent-foreground cta-button group">
                   Fazer Pedido Agora
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-                  onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
-                >
+                <Button size="lg" variant="outline" onClick={() => document.getElementById('sobre')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="border-white/30 text-white backdrop-blur-sm bg-transparent">
                   Nossa História
                 </Button>
               </div>
@@ -102,11 +88,7 @@ const HeroSection = () => {
                 <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <div className="text-center text-white">
                     <div className="mb-6">
-                      <img 
-                        src="/lovable-uploads/be0e2bdd-f1b3-419c-b83a-790e3709ddfd.png" 
-                        alt="Mini Pizza RJ"
-                        className="w-24 h-24 mx-auto rounded-full border-4 border-white/30"
-                      />
+                      <img src="/lovable-uploads/be0e2bdd-f1b3-419c-b83a-790e3709ddfd.png" alt="Mini Pizza RJ" className="w-24 h-24 mx-auto rounded-full border-4 border-white/30" />
                     </div>
                     
                     <h3 className="text-2xl font-bold mb-2">Para Todos os Gostos</h3>
@@ -136,8 +118,6 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white cursor-pointer animate-bounce" onClick={scrollToNextSection}>
         <ChevronDown size={32} />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
