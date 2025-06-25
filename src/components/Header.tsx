@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
 import {
   Sheet,
   SheetContent,
@@ -12,7 +11,6 @@ import {
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +28,7 @@ const Header = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5567987654321?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20implementos%20agrícolas.', '_blank');
+    window.open('https://wa.me/5521997075667?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20mini%20pizzas%20da%20Mini%20Pizza%20RJ.', '_blank');
   };
 
   return (
@@ -43,10 +41,21 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="relative z-20">
-            <h1 className="text-xl md:text-2xl font-display font-bold text-foreground">
-              <span className="text-primary">AgroTech</span> Implementos
-            </h1>
+          <a href="#" className="relative z-20 flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/be0e2bdd-f1b3-419c-b83a-790e3709ddfd.png" 
+              alt="Mini Pizza RJ - Logo"
+              className="h-12 w-12 md:h-14 md:w-14"
+            />
+            <div className="flex flex-col">
+              <h1 className="text-xl md:text-2xl font-bold text-foreground">
+                <span className="text-primary">Mini Pizza</span> 
+                <span className="text-accent font-script"> RJ</span>
+              </h1>
+              <span className="text-xs text-muted-foreground hidden md:block">
+                Prático, Rápido e Gostoso
+              </span>
+            </div>
           </a>
 
           {/* Desktop Menu */}
@@ -58,9 +67,9 @@ const Header = () => {
           <div className="hidden md:flex items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground cta-button"
             >
-              Solicitar Orçamento
+              Fazer Pedido
             </Button>
           </div>
 
@@ -79,9 +88,9 @@ const Header = () => {
                   <SheetClose asChild>
                     <Button 
                       onClick={handleWhatsAppClick}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4"
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4 cta-button"
                     >
-                      Solicitar Orçamento
+                      Fazer Pedido
                     </Button>
                   </SheetClose>
                 </nav>
@@ -101,11 +110,12 @@ interface NavLinksProps {
 
 const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
   const links = [
-    { name: 'Início', href: '#hero' },
-    { name: 'Produtos', href: '#products' },
-    { name: 'Marcas', href: '#brands' },
-    { name: 'Sobre Nós', href: '#about' },
-    { name: 'Contato', href: '#contact' },
+    { name: 'Início', href: '#inicio' },
+    { name: 'Sobre', href: '#sobre' },
+    { name: 'Produtos', href: '#produtos' },
+    { name: 'Depoimentos', href: '#depoimentos' },
+    { name: 'Localização', href: '#localizacao' },
+    { name: 'Contato', href: '#contato' },
   ];
 
   return (

@@ -1,0 +1,35 @@
+
+User-agent: *
+Allow: /
+
+# Principais páginas do site
+Allow: /#inicio
+Allow: /#sobre
+Allow: /#produtos
+Allow: /#depoimentos
+Allow: /#localizacao
+Allow: /#contato
+
+# Arquivos importantes para SEO
+Allow: /sitemap.xml
+Allow: /lovable-uploads/
+
+# Bloquear páginas administrativas e irrelevantes
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /_vite/
+Disallow: /src/
+
+# Sitemap
+Sitemap: https://minipizzarj.com.br/sitemap.xml
+
+# Específico para bots de redes sociais
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
