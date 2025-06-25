@@ -64,7 +64,7 @@ const HeroSection = () => {
                 
                 <Button size="lg" variant="outline" onClick={() => document.getElementById('sobre')?.scrollIntoView({
                 behavior: 'smooth'
-              })} className="border-white/30 backdrop-blur-sm text-white bg-white">
+              })} className="border-white/30 text-white backdrop-blur-sm bg-transparent">
                   Nossa História
                 </Button>
               </div>
