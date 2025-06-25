@@ -1,8 +1,7 @@
-
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Building, Utensils, Star } from 'lucide-react';
+import { ArrowRight, Users, Building, Utensils, Star, Heart } from 'lucide-react';
 
 const ProductsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
