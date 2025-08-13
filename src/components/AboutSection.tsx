@@ -74,8 +74,8 @@ const AboutSection = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/10 rounded-2xl transform rotate-3"></div>
               <img 
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Família preparando mini pizzas artesanais"
+                src="/lovable-uploads/0780f609-f781-4e6e-9144-4cd8115d311a.png" 
+                alt="Mini pizzas artesanais da Mini Pizza RJ com diversos sabores"
                 className="relative rounded-2xl shadow-pizza w-full object-cover h-[400px]"
               />
               <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
