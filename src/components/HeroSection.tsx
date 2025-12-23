@@ -96,15 +96,28 @@ const HeroSection = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl transform rotate-12"></div>
                 
-                <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20">
-                  <video 
-                    src="/lovable-uploads/hero-video.mp4" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    className="w-full h-[400px] object-cover" 
-                  />
+                <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20">
+                  <div className="text-center text-white">
+                    <div className="mb-4">
+                      <img src="/lovable-uploads/mini-pizzas-variedade.jpg" alt="Variedade de Mini Pizzas" className="w-full h-48 mx-auto rounded-xl object-cover border-2 border-white/30" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold mb-2">Para Todos os Gostos</h3>
+                    <p className="text-white/80 mb-6">
+                      Atendemos pessoas físicas e jurídicas. Perfeito para festas, eventos, lanchonetes e muito mais!
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-accent">40+</div>
+                        <div>Anos de Tradição</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-accent">100%</div>
+                        <div>Satisfação</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
