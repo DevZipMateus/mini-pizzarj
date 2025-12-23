@@ -92,10 +92,13 @@ const AboutSection = () => {
           <div className="animate-on-scroll order-2 md:order-1">
             <div className="relative">
               <div className="absolute inset-0 bg-accent/10 rounded-2xl transform -rotate-3"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Mini pizzas sendo compartilhadas entre amigos"
-                className="relative rounded-2xl shadow-cheese w-full object-cover h-[400px]"
+              <video 
+                src="/lovable-uploads/video-mini-pizzas.mp4" 
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="relative rounded-2xl shadow-cheese w-full object-contain h-auto max-h-[500px]"
               />
               <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                 Desde 2020
