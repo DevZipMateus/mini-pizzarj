@@ -105,7 +105,7 @@ const HeroSection = () => {
                         loop 
                         muted 
                         playsInline
-                        className="w-full h-48 mx-auto rounded-xl object-cover border-2 border-white/30" 
+                        className="w-full h-72 mx-auto rounded-xl object-cover border-2 border-white/30" 
                       />
                     </div>
                     
