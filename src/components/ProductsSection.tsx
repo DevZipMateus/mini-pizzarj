@@ -50,6 +50,7 @@ const ProductsSection = () => {
       description: "Soluções corporativas para lanchonetes, buffets, escolas e casas de festas",
       icon: <Building className="h-12 w-12 text-primary" />,
       image: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      video: "/lovable-uploads/video-empresas.mp4",
       features: [
         "Fornecimento em grande quantidade",
         "Preços especiais",
@@ -120,11 +121,22 @@ const ProductsSection = () => {
               style={{ animationDelay: `${index * 300}ms` }}
             >
               <div className="relative h-64">
-                <img 
-                  src={product.image} 
-                  alt={product.title}
-                  className="w-full h-full object-cover product-image"
-                />
+                {product.video ? (
+                  <video 
+                    src={product.video} 
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover product-image"
+                  />
+                ) : (
+                  <img 
+                    src={product.image} 
+                    alt={product.title}
+                    className="w-full h-full object-cover product-image"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   {product.icon}
