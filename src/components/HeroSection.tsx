@@ -96,10 +96,10 @@ const HeroSection = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl transform rotate-12"></div>
                 
-                <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20">
                   <div className="text-center text-white">
-                    <div className="mb-6">
-                      <img src="/lovable-uploads/be0e2bdd-f1b3-419c-b83a-790e3709ddfd.png" alt="Mini Pizza RJ" className="w-24 h-24 mx-auto rounded-full border-4 border-white/30" />
+                    <div className="mb-4">
+                      <img src="/lovable-uploads/mini-pizzas-variedade.jpg" alt="Variedade de Mini Pizzas" className="w-full h-48 mx-auto rounded-xl object-cover border-2 border-white/30" />
                     </div>
                     
                     <h3 className="text-2xl font-bold mb-2">Para Todos os Gostos</h3>

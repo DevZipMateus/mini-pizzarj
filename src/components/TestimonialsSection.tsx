@@ -131,23 +131,34 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        <div className="text-center animate-on-scroll">
-          <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 max-w-3xl mx-auto">
-            <div className="flex justify-center mb-4">
-              <div className="flex items-center space-x-1">
-                {renderStars(5)}
-                <span className="ml-2 text-sm font-medium text-muted-foreground">
-                  5.0 - Baseado em centenas de avaliações
-                </span>
+        <div className="animate-on-scroll">
+          <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <img 
+                  src="/lovable-uploads/mini-pizzas-bandeja.jpg" 
+                  alt="Bandeja de Mini Pizzas" 
+                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <div className="flex justify-center md:justify-start mb-4">
+                  <div className="flex items-center space-x-1">
+                    {renderStars(5)}
+                    <span className="ml-2 text-sm font-medium text-muted-foreground">
+                      5.0 - Baseado em centenas de avaliações
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  Junte-se aos nossos <span className="text-primary">Clientes Satisfeitos</span>
+                </h3>
+                <p className="text-muted-foreground">
+                  Faça seu pedido hoje e descubra por que somos a escolha preferida 
+                  para mini pizzas artesanais no Rio de Janeiro.
+                </p>
               </div>
             </div>
-            <h3 className="text-2xl font-bold mb-4">
-              Junte-se aos nossos <span className="text-primary">Clientes Satisfeitos</span>
-            </h3>
-            <p className="text-muted-foreground">
-              Faça seu pedido hoje e descubra por que somos a escolha preferida 
-              para mini pizzas artesanais no Rio de Janeiro.
-            </p>
           </div>
         </div>
       </div>
